@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+  
+    "name": "CBR Invoice Upload",
+    "description": "This extension allows the user to upload an invoice to CBR.",
+    "version": "1.0",
+  
+    "content_scripts": [
+        {
+          "matches": ["http://coolbluerewards.co.nz/dfi/responsive/coolblue/*"],
+          "js": ["background.js"],
+          "run_at": "document_end"
+          
+        }
+      ],
+
+    "browser_action": {
+        "default-title": "CBR",
+        "default_icon": "icon.png"
+    }
+    ,
+    "permissions": [
+      "https://*/*",
+      "http://*/*",
+      "activeTab"
+    ],
+    "web_accessible_resources": ["popup.js"]
+  }
