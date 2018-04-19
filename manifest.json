@@ -9,8 +9,7 @@
         {
           "matches": ["http://coolbluerewards.co.nz/dfi/responsive/coolblue/*"],
           "js": ["background.js"],
-          "run_at": "document_end"
-          
+          "run_at": "document_end" 
         }
       ],
 
@@ -24,5 +23,5 @@
       "http://*/*",
       "activeTab"
     ],
-    "web_accessible_resources": ["popup.js"]
+    "web_accessible_resources": ["popup.js", "pdf.js", "pdf.worker.js"]
   }
