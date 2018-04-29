@@ -97,7 +97,7 @@ function Product(modelNumber, quantity, basePrice, discount) {
 
 function parseProdcuts(pdfText) {
     var text = pdfText;
-    var regex = /(?:\d Years|\d+ Months) \d{4,6} (?:NC\*\s)?Fisher & Paykel [^\(\)]+\(([A-Z]{1,2}\d{2,4}[A-Z]*\d?)\) (\d) ([0-9.,]+) 15 [0-9.,]+ (Discount (?:-[0-9.,]+\s)+)*/g
+    var regex = /(?:\d Years|\d+ Months) \d{4,6} (?:Fisher & Paykel|Elba) [^\(\)]+\(([A-Z0-9]+)\) (\d) ([0-9.,]+) 15 [0-9.,]+ (Discount (?:-[0-9.,]+\s)+)*/g
     var match = regex.exec(text)
     var products = []
     while (match != null) {
